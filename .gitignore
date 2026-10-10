@@ -5,6 +5,7 @@ data/*
 
 # Generated results
 results/*
+!results/.gitkeep
 
 # Temporary and log files
 *.log
