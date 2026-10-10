@@ -1,0 +1,26 @@
+
+# Raw and processed data
+data/*
+!data/.gitkeep
+
+# Generated results
+results/*
+
+# Temporary and log files
+*.log
+*.tmp
+*.temp
+
+# R and RStudio files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Python cache files
+__pycache__/
+*.py[cod]
