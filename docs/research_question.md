@@ -22,11 +22,19 @@ How does the number of biological replicates affect the detection and stability 
 6. Investigate how repeated subsampling of biological replicates affects differential-expression results.
 7. Document the analysis so that it can be reproduced by another researcher.
 
-## Dataset selection principle
+## Data
+- Study: Schurch et al. (2016), RNA 22(6):839-851, doi:10.1261/rna.053959.115
+- Raw reads: European Nucleotide Archive, ERP004763 (PRJEB5348)
+- Processed counts: Bioconductor package HighlyReplicatedRNASeq (86 samples)
+- Comparison: wild-type yeast (control) versus snf2 knockout yeast
+- Unit of replication: independent yeast culture
+- Status: selected as the working dataset. Group sizes, exclusions and sample labels are to be verified from the metadata before any analysis.
 
-The primary dataset will be selected based on scientific provenance, accessible sample metadata, sufficient biological replication, computational feasibility, and the availability of published results suitable for comparison.
-
-The exact sample counts, exclusions, condition labels, and experimental design must be verified before analysis.
+## Replicate-number analysis (draft design)
+- Reference: the differential-expression result from all available replicates in each group
+- Test: repeated random subsets of biological replicates (for example 3, 6 and 12 per group), repeated many times with a fixed random seed
+- Measures: proportion of reference genes recovered, proportion of called genes not in the reference, overlap between repeated subsets, and agreement of estimated fold changes
+- To be finalised after the sample structure is verified
 
 ## Planned analysis
 
